@@ -281,6 +281,15 @@
               link.target = '_blank';
               link.innerText = link.href;
 
+              var link2 = document.createElement( 'a' );
+              tdName.appendChild( link2 );
+
+              var subject = `Slaptas kalėdų senis`;
+              var body = `${prettyName.replace(/as$/, 'ai')}, pažiūrėk, kam tau teks dovanoti dovaną Kalėdoms: ${link.href}. Jei turi pageidavimų kokią dovaną gauti nori tu - suvesk čia: ${(name.match(/\(([^)]+)\)/) || ['',''])[1]}.`;
+
+              link2.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+              link2.target = '_blank';
+              link2.innerText = 'email';
           }
 
       }
