@@ -157,7 +157,7 @@
                             document.getElementById('pairing-name').innerText = pairingDefinition[1] + '🎉';
 
                             if (pairingDefinition[2]) {
-                                var link = '(aaa)'.replaceAll('(', '').replaceAll(')', '')
+                                var link = pairingDefinition[2].replaceAll('(', '').replaceAll(')', '')
                                 document.getElementById('pairing-details-link').href = link;
                                 document.getElementById('pairing-details-link').innerText = link;
                             } else {
