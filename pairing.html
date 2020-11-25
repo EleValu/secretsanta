@@ -152,12 +152,14 @@
 
                     <div class="pairing">
                         <div id="pairing-name"></div>
-                        <div id="pairing-details"></div>
+                        <div id="pairing-details">🎅 Įkvėpimo dovanėlėm pirkti paieškok čia 🎁 <a id="pairing-details-link"></a> 🎁 🤶</div>
                         <script>
                             document.getElementById('pairing-name').innerText = pairingDefinition[1] + '🎉';
 
                             if (pairingDefinition[2]) {
-                                document.getElementById('pairing-details').innerText = '🎅 Įkvėpimo dovanėlėm pirkti paieškok čia 🎁 ' + pairingDefinition[2] + ' 🎁 🤶';
+                                var link = '(aaa)'.replaceAll('(', '').replaceAll(')', '')
+                                document.getElementById('pairing-details-link').href = link;
+                                document.getElementById('pairing-details-link').innerText = link;
                             } else {
                                 document.getElementById('pairing-details').style.display = 'none';
                             }
